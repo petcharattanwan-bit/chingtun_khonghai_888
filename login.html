@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+<meta charset="UTF-8">
+<title>เข้าสู่ระบบ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@500;600;700&family=Sarabun:wght@400;500;600;700&family=Poppins:wght@800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="chingtun.css">
+</head>
+
+
+<body>
+
+
+<header>
+<div class="brand-logo" aria-hidden="true">
+<svg viewBox="0 0 220 105" width="176" height="84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KhongHai">
+  <text x="2" y="54" font-family="'Poppins','Segoe UI',sans-serif" font-weight="800" font-size="44" letter-spacing="-1">
+    <tspan style="fill:var(--text)">Khong</tspan><tspan style="fill:var(--accent)">Hai</tspan>
+  </text>
+  <rect x="2" y="68" width="204" height="27" rx="13.5" style="fill:var(--surface-2); stroke:var(--border); stroke-width:1"/>
+  <text x="104" y="86" text-anchor="middle" font-family="'Sarabun',sans-serif" font-weight="700" font-size="10" letter-spacing="1.4" style="fill:var(--text-muted)">LOST &amp; FOUND SYSTEM</text>
+</svg>
+</div>
+<h1 class="sr-only">KhongHai — เข้าสู่ระบบ</h1>
+<p class="page-tag">เข้าสู่ระบบ</p>
+<button id="themeBtn">โหมดสว่าง</button>
+</header>
+
+
+<nav>
+<a href="index.html">หน้าแรก</a>
+<a href="lost.html">ของหาย</a>
+<a href="report.html">แจ้งของหาย</a>
+<a href="found.html">ของที่พบแล้ว</a>
+<a href="contact.html">ติดต่อเรา</a>
+<a href="profile.html">โปรไฟล์ของฉัน</a>
+</nav>
+
+
+<div class="container" style="max-width:420px;">
+
+<section class="card">
+    <h2>เข้าใช้งานเว็บไซต์</h2>
+    <p style="color:var(--text-muted); margin-bottom:14px;">ต้องเข้าสู่ระบบก่อน จึงจะแจ้งของหายได้</p>
+
+    <button id="anonBtn" style="width:100%;">เข้าใช้งานแบบไม่ระบุตัวตน</button>
+    <p style="color:var(--text-muted); font-size:0.85rem; margin-top:6px;">
+        กดปุ่มเดียวเข้าได้เลย ไม่ต้องกรอกอีเมลหรือรหัสผ่าน เหมาะสำหรับใช้งานทั่วไป
+    </p>
+
+    <div style="display:flex; align-items:center; gap:10px; margin:20px 0;">
+        <hr style="flex:1; border:none; border-top:1px solid var(--border);">
+        <span style="color:var(--text-muted); font-size:0.85rem;">หรือ</span>
+        <hr style="flex:1; border:none; border-top:1px solid var(--border);">
+    </div>
+
+    <p style="text-align:center;">
+        <a href="#" id="showEmailFormLink">ใช้บัญชีอีเมลแทน (สำหรับผู้ที่อยากบันทึกบัญชีไว้ใช้ซ้ำ)</a>
+    </p>
+
+    <form id="userForm" style="display:none; margin-top:12px;">
+
+        <label>อีเมล</label>
+        <input type="email" id="uEmail" placeholder="you@example.com" required>
+
+        <label>รหัสผ่าน</label>
+        <input type="password" id="uPassword" placeholder="อย่างน้อย 6 ตัวอักษร" required>
+
+        <button type="submit" id="userSubmitBtn">เข้าสู่ระบบ</button>
+
+        <p style="margin-top:12px; text-align:center; font-size:0.9rem;">
+            <span id="switchText">ยังไม่มีบัญชี?</span>
+            <a href="#" id="switchModeLink">สมัครสมาชิก</a>
+        </p>
+
+    </form>
+
+    <p id="userError" style="color:var(--danger); margin-top:10px; display:none;"></p>
+    <p id="userSuccess" style="color:var(--success); margin-top:10px; display:none;"></p>
+
+</section>
+
+</div>
+
+
+<footer>
+© 2026 Lost & Found &nbsp;|&nbsp; <a href="admin-login.html">สำหรับเจ้าหน้าที่</a>
+</footer>
+
+<script type="module" src="user.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
